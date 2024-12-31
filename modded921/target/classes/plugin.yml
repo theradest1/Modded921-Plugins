@@ -1,0 +1,11 @@
+name: modded921
+main: com.landonbakken.modded921.Plugin
+version: 0.0.1
+api-version: 1.15
+authors: [LandonBakken]
+description: Plugin for modded 921
+commands:
+  special_item:
+    description: Get a special item
+    usage: /<command> <item>
+    aliases: [si]
