@@ -8,10 +8,12 @@ import org.bukkit.entity.Player;
 public class CommandHandler implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
-        if(command.getName().equals("special_item") && sender instanceof Player){
-            Player player = (Player) sender;
-            String itemName = args.toString();
-            player.sendMessage("Item requested: " + itemName);
+        if(sender instanceof Player){
+            if(command.getName().equals("specialItem")){
+                String itemName = args[1];
+                Player player = (Player) sender;
+                player.sendMessage("Item requested: " + itemName);
+            }
             return true;
         }
         return false;

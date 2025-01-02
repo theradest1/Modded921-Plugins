@@ -5,7 +5,7 @@ api-version: 1.15
 authors: [LandonBakken]
 description: Plugin for modded 921
 commands:
-  special_item:
-    description: Get a special item
-    usage: /<command> <item>
+  specialItem:
+    description: get a special item
+    usage: /specialItem <subcatagory> <item>
     aliases: [si]

@@ -12,12 +12,18 @@ public class Plugin extends JavaPlugin
 
   public void onEnable()
   {
-    LOGGER.info("modded921 enabled");
-    getCommand("special_item").setExecutor(new CommandHandler());
+    LOGGER.info("Modded921 Starting");
+    
+    //commands
+    LOGGER.info("Registering commands");
+    getCommand("specialItem").setTabCompleter(new TabHandler());
+    getCommand("specialItem").setExecutor(new CommandHandler());
+    
+    LOGGER.info("Modded921 Enabled");
   }
 
   public void onDisable()
   {
-    LOGGER.info("modded921 disabled");
+    LOGGER.info("Modded921 Disabled");
   }
 }
