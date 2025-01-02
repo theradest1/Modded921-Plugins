@@ -2,10 +2,12 @@ name: modded921
 main: com.landonbakken.modded921.Plugin
 version: 0.0.1
 api-version: 1.15
-authors: [LandonBakken]
+authors: [LandonBakken, Ricky]
 description: Plugin for modded 921
 commands:
+  howdy:
+    description: say  hi to others
+    usage: /howdy <something>
   specialItem:
     description: get a special item
     usage: /specialItem <subcatagory> <item>
-    aliases: [si]

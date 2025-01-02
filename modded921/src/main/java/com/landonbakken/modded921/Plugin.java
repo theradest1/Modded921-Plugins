@@ -16,8 +16,12 @@ public class Plugin extends JavaPlugin
     
     //commands
     LOGGER.info("Registering commands");
+    
     getCommand("specialItem").setTabCompleter(new TabHandler());
+    getCommand("howdy").setTabCompleter(new TabHandler());
+
     getCommand("specialItem").setExecutor(new CommandHandler());
+    getCommand("howdy").setExecutor(new CommandHandler());
     
     LOGGER.info("Modded921 Enabled");
   }

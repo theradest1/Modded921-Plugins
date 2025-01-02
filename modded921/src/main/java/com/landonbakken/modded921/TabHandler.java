@@ -34,6 +34,11 @@ public class TabHandler implements TabCompleter {
                 }
             }
         }
+        else if(command.getName().equals("howdy")){
+            if (args.length == 1) { // First argument
+                suggestions.add("hi");
+            }
+        }
 
         //filter with what the user has entered so far
         suggestions.stream()
