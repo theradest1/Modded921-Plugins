@@ -9,13 +9,17 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Plugin extends JavaPlugin
 {
   public static Logger LOGGER=Logger.getLogger("modded921");
+  
+  public static ConfigLoader configLoader = new ConfigLoader();
 
   public void onEnable()
   {
-    LOGGER.info("Modded921 Starting");
+    LOGGER.info("\nModded921 Starting");
+
+    LOGGER.info("Loading Special weapon config...");
+    configLoader.loadConfigs();
     
-    //commands
-    LOGGER.info("Registering commands");
+    LOGGER.info("Registering commands...");
     
     getCommand("specialItem").setTabCompleter(new TabHandler());
     getCommand("howdy").setTabCompleter(new TabHandler());
@@ -23,7 +27,7 @@ public class Plugin extends JavaPlugin
     getCommand("specialItem").setExecutor(new CommandHandler());
     getCommand("howdy").setExecutor(new CommandHandler());
     
-    LOGGER.info("Modded921 Enabled");
+    LOGGER.info("Modded921 Enabled!\n");
   }
 
   public void onDisable()

@@ -16,29 +16,25 @@ public class TabHandler implements TabCompleter {
             if (args.length == 1) { // First argument
                 suggestions.add("axe");
                 suggestions.add("sword");
-                suggestions.add("wand");
-                suggestions.add("other");
+                //suggestions.add("wand");
+                //suggestions.add("other");
             } else if (args.length == 2) { // Second argument
                 if (args[0].equals("axe")) {
                     suggestions.add("thorsAxe");
                 }
                 else if (args[0].equals("sword")) {
-                    suggestions.add("wamboCombo");
-                    suggestions.add("lightnightKatana");
+                    suggestions.add("womboCombo");
+                    //suggestions.add("lightnightKatana");
                 }
                 else if (args[0].equals("wand")) {
-                    suggestions.add("kineticWand");
+                    //suggestions.add("kineticWand");
                 }
                 else if (args[0].equals("other")) {
-                    suggestions.add("fists");
+                    //suggestions.add("fists");
                 }
             }
         }
-        else if(command.getName().equals("howdy")){
-            if (args.length == 1) { // First argument
-                suggestions.add("hi");
-            }
-        }
+        else if(command.getName().equals("howdy")){}
 
         //filter with what the user has entered so far
         suggestions.stream()

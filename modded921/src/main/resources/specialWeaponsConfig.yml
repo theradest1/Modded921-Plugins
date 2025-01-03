@@ -1,0 +1,7 @@
+thorsAxe:
+    displayName: Thor's Axe
+    itemType: IRON_AXE
+womboCombo:
+    displayName: Wombo Combo
+    itemType: IRON_SWORD
+    
