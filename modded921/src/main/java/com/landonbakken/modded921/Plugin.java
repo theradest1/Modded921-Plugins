@@ -1,6 +1,7 @@
 package com.landonbakken.modded921;
 
 import java.util.logging.Logger;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 /*
@@ -14,18 +15,22 @@ public class Plugin extends JavaPlugin
 
   public void onEnable()
   {
-    LOGGER.info("\nModded921 Starting");
+    LOGGER.info("Modded921 Starting");
 
     LOGGER.info("Loading Special weapon config...");
     configLoader.loadConfigs();
     
     LOGGER.info("Registering commands...");
-    
-    getCommand("specialItem").setTabCompleter(new TabHandler());
-    getCommand("howdy").setTabCompleter(new TabHandler());
+    SpecialItems specialItems = new SpecialItems();
+    getCommand("specialItem").setTabCompleter(specialItems);
+    getCommand("specialItem").setExecutor(specialItems);
+    OtherCommands otherCommands = new OtherCommands();
+    getCommand("howdy").setTabCompleter(otherCommands);
+    getCommand("howdy").setExecutor(otherCommands);
 
-    getCommand("specialItem").setExecutor(new CommandHandler());
-    getCommand("howdy").setExecutor(new CommandHandler());
+    LOGGER.info("Registering events...");
+    PlayerInteractions playerInteractions = new PlayerInteractions();
+    getServer().getPluginManager().registerEvents(playerInteractions, this);
     
     LOGGER.info("Modded921 Enabled!\n");
   }

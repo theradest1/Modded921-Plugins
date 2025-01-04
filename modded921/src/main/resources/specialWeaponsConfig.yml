@@ -1,7 +1,13 @@
 thorsAxe:
-    displayName: Thor's Axe
+    displayName: §r§0§l§kX §r§6Thor's Axe §r§0§l§kX
     itemType: IRON_AXE
+    damage: 1
+    rightCooldown: 5
+    leftCooldown: .2 
 womboCombo:
     displayName: Wombo Combo
     itemType: IRON_SWORD
+    damage: .02
+    rightCooldown: 0 
+    leftCooldown: 0
     
