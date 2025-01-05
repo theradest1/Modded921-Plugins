@@ -22,13 +22,13 @@ public class PlayerInteractions implements Listener {
 			//left click
 			onLeftClick(event);
 			//stop normal things from happening
-			event.setCancelled(true);
+			//event.setCancelled(true);
 		}
 		if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 			//right click
 			onRightClick(event);
 			//stop normal things from happening
-			event.setCancelled(true);
+			//event.setCancelled(true);
 		}
 	}
 
