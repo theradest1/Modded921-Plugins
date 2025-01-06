@@ -9,11 +9,11 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 public class PlayerInteractions implements Listener {
 	void onLeftClick(PlayerInteractEvent event){
-		event.getPlayer().sendMessage("You left clicked!");
+		//event.getPlayer().sendMessage("You left clicked!");
 	}
 
 	void onRightClick(PlayerInteractEvent event){
-		event.getPlayer().sendMessage("You right clicked!");
+		//event.getPlayer().sendMessage("You right clicked!");
 	}
 
 	@EventHandler
